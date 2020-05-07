@@ -1,0 +1,240 @@
+@import'reset';
+@import'variables';
+
+
+.container{
+    width: 700px;
+    // margin: 0px auto;
+}
+.layout1{
+    .bg-grey{
+        background: rgb(68, 67, 67);
+        width: 700px;
+        .container{
+            .layout1{
+                padding: 10px 5px;
+                position: relative;
+                .title{
+                    margin-left: 5px;
+                    color: rgb(255, 230, 0);
+                    font-size: 25px;
+                    line-height: 30px;
+                    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                }
+                .more{
+                    > a{
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                        color: rgba(white,0.6);
+                        font-size: 15px;
+                        > span{
+                            > i{
+                                color: rgba(white,0.6);
+                                font-size: 15px;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+                .item-list{
+                    border-top: rgba(white,0.3);
+                    margin-left: 5px;
+                    .row{
+                        display: flex;
+                        flex-wrap: wrap;
+                        border-top: 1px solid rgba(white,0.3);
+                        .item{
+                            position: relative;
+                            width: 100%/$col;
+                            padding: 5px 5px 5px 0px;
+                            .item-content{
+                                background: rgba(black,0.7);
+                                border-bottom: 1px solid rgba(white,0.3);
+                                img{
+                                    padding: 2px;
+                                    width:100%;// bằng kích cỡ của thẻ a
+                                }
+                                .vietnamese-name{
+                                    //cắt text
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    color: #00e1ff;
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                    margin: 0px 7px;
+                                }
+                                .english-name{
+                                    //cắt text
+                                    margin-top: 5px;
+                                    white-space: nowrap;//văn bản chỉ hiển thị trên cùng 1 hàng
+                                    overflow: hidden;//phần dư bi giấu đi
+                                    text-overflow: ellipsis;//ellipsis: dấu chấm lửng ...
+                                    color:rgba(white,0.7);
+                                    font-size: 13.5px;
+                                    font-weight: 400;
+                                    margin: 0px 7px;
+                                }
+                                .time{
+                                    margin-top: 5px;
+                                    color: rgba(white,0.4);
+                                    font-size: 13px;
+                                    font-weight: 100;
+                                    line-height: 28px;
+                                    margin: 0px 7px;
+                                }
+                            }
+                            .quality{
+                                > h3{
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 2px;
+                                    color: white;
+                                    background: #A21D0A;
+                                    font-size: 12px;
+                                    line-height: 20px;
+                                    font-weight: 700;
+                                    padding: 2px;
+                                    >span{
+                                        position: absolute;
+                                        top: 0px;
+                                        right: -14px;
+                                        //tam giác nhỏ
+                                        //transparent: màu trong suốt  
+                                        border-color: transparent transparent transparent #A21D0A;
+                                        border-style: solid;
+                                        border-width: 11px 0px 12px 13.7px; //thay đổi kích thước tam giác
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.layout2{
+    margin-top: 100px;
+    .container{
+        .news{
+            &-title{
+                padding-left: 20px;
+                color:rgba(black,0.8);
+                font-size: 35px;
+                font-weight: 700;
+                font-style: oblique;//in nghiêng
+                font-family: "Georgia Pro", Georgia, "Droid Serif", serif;
+                .bg-blue{
+                    background-color: #b9e1ff;
+                    height: 10px;
+                    margin-top: -13px;
+                }
+            }
+            .news-list{
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                .left-news{
+                    margin: 0px 50px 0px 20px;
+                    .border-bottom{
+                        border-bottom: 1px solid rgba(black,0.3);
+                    }
+                    .content{
+                        padding-bottom: 10px;
+                        margin: 10px 0px;
+                        display: flex;
+                        justify-content: space-between;
+                        .detail{
+                            margin-left: 10px;
+                            .title{
+                                font-size: 17px;
+                                font-weight: 700;
+                                color: rgba(black,0.7);
+                            }
+                            > span{
+                                font-size: 10px;
+                                font-weight: 700;
+                            }
+                            .cOrange{
+                                color: orange;
+                            }
+                            .cPurple{
+                                color: purple;
+                            }
+                            .cBlue{
+                                color: blue;
+                            }
+                            .cGreen{
+                                color: green;
+                            }
+                            .cRed{
+                                color: red;
+                            }
+                        }
+                    }
+                }
+                .right-news{
+                    .border-bottom{
+                        border-bottom: 1px solid rgba(black,0.3);
+                    }
+                    .content{
+                        margin: 10px 0px;
+                        padding-bottom: 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        .detail{
+                            margin-left: 10px;
+                            .title{
+                                font-size: 17px;
+                                font-weight: 700;
+                                color: rgba(black,0.7);
+                            }
+                            > span{
+                                font-size: 10px;
+                                font-weight: 700;
+                            }
+                            .cOrange{
+                                color: orange;
+                            }
+                            .cPurple{
+                                color: purple;
+                            }
+                            .cBlue{
+                                color: blue;
+                            }
+                            .cGreen{
+                                color: green;
+                            }
+                            .cRed{
+                                color: red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+ 
+.border{
+    height: 50px;
+    width: 70px;
+    background: green;
+    margin: 50px;
+    position: relative;
+    span{
+        position: absolute;
+        top: 0px;
+        right: -14px;
+        //tam giác nhỏ
+        //transparent: màu trong suốt  
+        border-color:  transparent transparent transparent #A21D0A ;
+        border-style: solid;
+        border-width: 11px 0px 12px 13.7px; //thay đổi kích thước tam giác
+    }
+
+}
